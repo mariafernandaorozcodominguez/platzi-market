@@ -10,5 +10,4 @@ public interface ProductoCrudRepository extends CrudRepository<Producto, Integer
     /*Query normal @Query(value="SELESC * FROM productos WHERE id_categoria = ?", nativeQuery = true)*/
     List<Producto> findByIdCategoriaOrderByNombreAsc(int idCategoria); /*Utilizando Query Methods*/
     Optional<List<Producto>> findByCantidadStockLessThanAndEstado(int cantidadStock, boolean estado);
-
 }

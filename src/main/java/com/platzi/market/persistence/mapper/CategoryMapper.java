@@ -18,8 +18,8 @@ public interface CategoryMapper {
     Category toCategory(Categoria categoria); //Vamos a convertir una categoria en category
 
     @InheritInverseConfiguration //Anotacion para indicar a mapstruct que la configuracion de campos anteriores se hace inverso
-    @Mapping(target="productos", ignore = true)
-    Categoria toCategory(Category category);
+    @Mapping(target = "productos", ignore = true)
+    Categoria toCategoria(Category category);
 
 
 

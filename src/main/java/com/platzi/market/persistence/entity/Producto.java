@@ -3,23 +3,23 @@ package com.platzi.market.persistence.entity;
 import javax.persistence.*;
 
 @Entity  //Esta clase se comporta como una tabla de la BD
-@Table(name="productoss") //Va a mapear la tabla productos, llamada asi en BD
+@Table(name = "productoss") //Va a mapear la tabla productos, llamada asi en BD
 public class Producto {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) //Java generara el Id de forma automatica
-    @Column(name="id_producto")
+    @Column(name = "id_producto")
     private Integer idProducto;
 
     private String nombre;
 
-    @Column(name="id_categoria")
+    @Column(name = "id_categoria")
     private Integer idCategoria;
 
-    @Column(name="codigo_barras")
+    @Column(name = "codigo_barras")
     private String codigoBarras;
 
-    @Column(name="precio_venta")
+    @Column(name = "precio_venta")
     private Double precioVenta;
 
     @Column(name="cantidad_stock")
@@ -28,7 +28,7 @@ public class Producto {
     private Boolean estado;
 
     @ManyToOne //De muchos a uno
-    @JoinColumn(name="id_categoria", insertable = false, updatable = false) // con que campo se relaciona, no se borra ni se actualiza nueva categoria
+    @JoinColumn(name = "id_categoria", insertable = false, updatable = false) // con que campo se relaciona, no se borra ni se actualiza nueva categoria
     private Categoria categoria;
 
     public Integer getIdProducto() {
